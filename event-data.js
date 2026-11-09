@@ -17,7 +17,7 @@ window.EVENT_DATA = {
   bengaliDateRange: "২১শে – ২৫শে কার্তিক, ১৪৩৩",
   location: "ধলহরা",
   locationNote: "অনুষ্ঠানস্থল ও যোগাযোগের বিস্তারিত তথ্য আয়োজক কমিটির কাছ থেকে নিশ্চিত করে এখানে যোগ করুন।",
-  coverImage: "assets/cover.jpg",
+  coverImage: "assets/cover.png",
   schedule: [
     {
       date: "08 November 2026",
@@ -102,7 +102,7 @@ window.EVENT_DATA = {
     address: "কাশীপুর বাজার"
   },
   gallery: [
-    "assets/cover.jpg",
+    "assets/cover.png",
     "assets/leaflet-page-2.jpg",
     "assets/leaflet-page-3.jpg",
     "assets/leaflet-page-4.jpg"
