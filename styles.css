@@ -3296,3 +3296,14 @@ a:focus-visible, button:focus-visible { outline:2px solid #f18a92 !important; ou
 @media (prefers-reduced-motion:reduce) {
   *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
 }
+
+@media (max-width: 760px) {
+  #mainNav .developer-nav-trigger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-weight: 800 !important;
+    width: 100% !important;
+  }
+}
