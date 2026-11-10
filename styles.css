@@ -3307,3 +3307,8 @@ a:focus-visible, button:focus-visible { outline:2px solid #f18a92 !important; ou
     width: 100% !important;
   }
 }
+
+.developer-profile-copy h2 em {
+    color: #FFFFFF !important;
+    font-style: normal;
+}
