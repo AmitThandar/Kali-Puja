@@ -4,21 +4,21 @@
   const $ = (id) => document.getElementById(id);
   const set = (id, value) => { const el=$(id); if(el && value!==undefined) el.textContent=value; };
   const bnDigits = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
-  const dayNames = ["প্রথম দিন","দ্বিতীয় দিন","তৃতীয় দিন","চতুর্থ দিন","পঞ্চম দিন"];
+  const dayNames = ["প্রথম দিন","দ্বিতীয় দিন","তৃতীয় দিন","চতুর্থ দিন","পঞ্চম দিন"];
 
   document.title = `${D.titleBn} | ${D.clubName}`;
   set("brandName",D.clubName); set("footerClub",D.clubName); set("footerClubName",D.clubName);
-  set("clubHero",`${D.clubName}-এর পরিচালনায়`); set("edition",D.edition);
+  set("clubHero",`${D.clubName}-এর পরিচালনায়`); set("edition",D.edition);
   set("heroTitle",`${D.titleBn.replace("সার্বজনীন ","সার্বজনীন<br>")}`);
   $("heroTitle").innerHTML = `সার্বজনীন<br><em>শ্রী শ্রী শ্যামা</em><br>পূজা`;
   set("heroTagline",D.tagline); set("heroIntro",D.intro); set("heroDate",D.dateRange);
   set("heroBengaliDate",D.bengaliDateRange); set("heroLocation",D.location);
   set("stampYear",D.year); set("heroImage",D.coverImage); $("heroImage").src=D.coverImage;
-  set("aboutClub",`আয়োজনে — ${D.clubName}`); set("pujaBengaliDate",D.bengaliDateRange);
+  set("aboutClub",`আয়োজনে — ${D.clubName}`); set("pujaBengaliDate",D.bengaliDateRange);
   set("pujaDate",D.dateRange); set("contactAddress",D.contact.address || D.location);
   set("contactYear",bnDigits(D.year)); set("footerYear",D.year);
   set("statDays",bnDigits(D.schedule.length)); set("statYear",D.edition.match(/\d+/)?.[0] || "৪৪");
-  set("aboutText",`${D.titleBn}কে কেন্দ্র করে ${D.schedule.length} দিনের এই আয়োজন শুধুই ধর্মীয় অনুষ্ঠান নয় — এটি আমাদের পাড়া, মানুষ, সংস্কৃতি ও সম্প্রীতির এক মিলনমেলা।`);
+  set("aboutText",`${D.titleBn}কে কেন্দ্র করে ${D.schedule.length} দিনের এই আয়োজন শুধুই ধর্মীয় অনুষ্ঠান নয় — এটি আমাদের পাড়া, মানুষ, সংস্কৃতি ও সম্প্রীতির এক মিলনমেলা।`);
   set("contactAddress",D.contact.address || D.location);
   if(D.contact.phone){$("phoneWrap").hidden=false;set("contactPhone",D.contact.phone);}
 
@@ -37,7 +37,7 @@
   const comps=[];
   D.schedule.forEach((day,i)=>day.events.forEach(e=>{
     const title=e[1];
-    if(/প্রতিযোগিতা|দৌড়|হিট দ্য বোতল|হাঁড়ি ভাঙা|মিউজিক্যাল চেয়ার|লক্ষ্মীলাভ|বল নিক্ষেপ|যেমন খুশি/.test(title))
+    if(/প্রতিযোগিতা|দৌড়|হিট দ্য বোতল|হাঁড়ি ভাঙা|মিউজিক্যাল চেয়ার|লক্ষ্মীলাভ|বল নিক্ষেপ|যেমন খুশি/.test(title))
       comps.push({title,detail:e[2]||"সকলের অংশগ্রহণে",day:day.label});
   }));
   $("competitionGrid").innerHTML=comps.map((c,i)=>`<article class="competition-card"><span class="comp-day">${c.day}</span><strong>${c.title}</strong><small>${c.detail}</small></article>`).join("");
